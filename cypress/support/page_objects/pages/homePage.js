@@ -4,6 +4,10 @@ export class HomePage {
         cy.get('[id="twotabsearchtextbox"]').type(item)
         cy.get('[id="nav-search-submit-button"]').click()
     }
+
+    clickHamburguerLeftMenu() {
+        cy.get('[id="nav-hamburger-menu"]').click()
+    }
 }
 
 export const onHomePage = new HomePage()
