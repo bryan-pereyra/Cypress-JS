@@ -1,6 +1,6 @@
 Feature: Search for an item and print its price in console
 
-  Scenario Outline: Search for '<itemName>'
+  Scenario: Search for <itemName>
     Given I navigate to the website
     When Search for an '<itemName>' and click on the first result
     Then Store the price and print it
@@ -8,5 +8,5 @@ Feature: Search for an item and print its price in console
     Examples:
       | itemName           |
       | iPhone 14 Pro Max  |
-      | Macbook Air        |
+      | Macbook Air M1     |
       | Samsung Galaxy S23 |
