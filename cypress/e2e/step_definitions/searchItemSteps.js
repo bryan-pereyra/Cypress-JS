@@ -12,6 +12,13 @@ When('Search for an {string} and click on the first result', (itemName) => {
     onResultsPage.selectFirstResult()
 });
 
+When('Search for an item and click on the first result', (dataTable) => {
+    dataTable.hashes().forEach((item) => {
+        onHomePage.searchFor(item.itemName)
+        onResultsPage.selectFirstResult()
+    })
+});
+
 Then('Store the price and print it', () => {
     onDetailsPage.storeAndPrintPrice()
     onDetailsPage.assertPriceIsNotEmpty()

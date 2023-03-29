@@ -1,11 +1,19 @@
-export class LeftMenuPage {
+const elements = require ("../support/page_objects/testData/ShopByDepartment.json");
 
-    assertDepartmentSection() {
-        cy.contains('div.hmenu-item', 'shop by department').should('be.visible')
-        cy.contains('a[data-menu-id="5"]', 'Electronics').should('be.visible')
-        cy.contains('a[data-menu-id="6"]', 'Computers').should('be.visible')
-        cy.contains('a[data-menu-id="7"]', 'Smart Home').should('be.visible')
-        cy.contains('a[data-menu-id="8"]', 'Arts & Crafts').should('be.visible')
+export class LeftMenuPage {
+    
+/*     assertDepartmentSectionsAreVisible() {
+        cy.get("a.hmenu-item").then(($el) => {
+            return Cypress._.map($el, 'innerText')
+        }).should('deep.equal', elements.ShopByDepartment)
+    } */
+
+    assertDepartmentSectionsAreVisible() {
+        cy.get("div.hmenu-item").then(list => {
+            cy.get('a.hmenu-item').each(section => {
+                cy.wrap(section).should('contain', elements.ShopByDepartment)
+            })
+        })
     }
 }
 
