@@ -1,8 +1,8 @@
 {
-    "ShopByDepartment": [
-    "Electronics",
-    "Computers",
-    "Smart Home",
-    "Arts & Crafts"
+    "Sections": [
+        "Electronics",
+        "Computers",
+        "Smart Home",
+        "Arts & Crafts"
     ]
 }

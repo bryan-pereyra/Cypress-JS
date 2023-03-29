@@ -7,5 +7,6 @@ When('Click on the Hamburguer Left Menu', (itemName) => {
 });
 
 Then("'Shop By Department' and 'Programs & Features' sections are visibles", () => {
-    onLeftMenu.assertDepartmentSectionsAreVisible()
+    onLeftMenu.assertShopByDepartmentSectionsAreVisible()
+    onLeftMenu.assertProgramsAndFeaturesSectionsAreVisible()
 });
