@@ -26,6 +26,15 @@ export class LeftMenuPage {
             })
         })
     }
+
+    testingElementScenario() {
+        cy.contains("div.hmenu-item", 'shop by department').should('be.visible')
+        cy.readFile('cypress/support/page_objects/testData/ShopByDepartment.json').then(ShopByDepartment => {
+            cy.wrap(ShopByDepartment.TestToFail).each(section => {
+                cy.contains('[data-menu-id]', section).scrollIntoView().should('be.visible')
+            })
+        })
+    }
 }
 
 

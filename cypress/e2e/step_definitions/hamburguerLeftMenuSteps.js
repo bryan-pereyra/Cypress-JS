@@ -10,3 +10,8 @@ Then("'Shop By Department' and 'Programs & Features' sections are visibles", () 
     onLeftMenu.assertShopByDepartmentSectionsAreVisible()
     onLeftMenu.assertProgramsAndFeaturesSectionsAreVisible()
 });
+
+Then("the 'TestingElement' section is not visible", () => {
+    onLeftMenu.testingElementScenario()
+});
+

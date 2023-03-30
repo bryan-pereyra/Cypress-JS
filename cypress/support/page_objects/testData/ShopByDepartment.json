@@ -4,5 +4,12 @@
         "Computers",
         "Smart Home",
         "Arts & Crafts"
+    ],
+    "TestToFail": [
+        "Electronics",
+        "Computers",
+        "Smart Home",
+        "Arts & Crafts",
+        "Testing Element"
     ]
 }
