@@ -37,5 +37,4 @@ export class LeftMenuPage {
     }
 }
 
-
 export const onLeftMenu = new LeftMenuPage()
