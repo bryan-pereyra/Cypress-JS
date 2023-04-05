@@ -16,7 +16,8 @@ module.exports = defineConfig({
 
       return config;
     },
-    specPattern: "cypress/e2e/features/*.feature",
+    specPattern: ["cypress/e2e/features/*.feature", "cypress/e2e/API_Tests/*"],
     baseUrl: 'https://www.amazon.com',
+    video: false
   },
 });
