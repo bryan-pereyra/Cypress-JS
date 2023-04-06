@@ -1,8 +1,8 @@
 const url = 'https://reqres.in/api/users'
 
-context("Reqres Requests", () => {
+context("Reqres API", () => {
 
-    it("POST Reqres", () => {
+    it("POST Method - Reqres API", () => {
         cy.request({
             method: 'POST',
             url: url,
@@ -16,7 +16,7 @@ context("Reqres Requests", () => {
         })
     })
 
-    it("PUT Reqres", () => {
+    it("PUT Method - Reqres API", () => {
         cy.request({
             method: 'PUT',
             url: url + '/2',
@@ -30,9 +30,9 @@ context("Reqres Requests", () => {
         })
     })
 
-    it("DELETE Reqres", () => {
+    it("DELETE Method - Reqres API", () => {
         cy.request({
-            method: 'Delete',
+            method: 'DELETE',
             url: url + '/2',
         }).then((response) => {
             expect(response.status).to.eq(204)

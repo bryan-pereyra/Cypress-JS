@@ -1,8 +1,8 @@
 const NASA = require("../../support/page_objects/testData/NasaAPIResponse.json");
 
-context("NASA GET Requests", () => {
+context("NASA API", () => {
 
-  it("Get 'APOD'", () => {
+  it("GET Method - 'APOD' API", () => {
     cy.request({
       method: 'GET',
       url: NASA.apod_url,
@@ -17,7 +17,7 @@ context("NASA GET Requests", () => {
     })
   })
 
-  it("Get 'Earth'", () => {
+  it("GET Method - 'Earth' API", () => {
     cy.request({
       method: 'GET',
       url: NASA.earth_url,
